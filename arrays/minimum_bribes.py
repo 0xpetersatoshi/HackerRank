@@ -75,9 +75,9 @@ import random
 def minimum_bribes(queue):
     """Returns the minimum number of bribes people in a queue accepted."""
 
-    # for index, i in enumerate(queue):
-    #     if (i - index) > 3:
-    #         return "Too chaotic"
+    for index, i in enumerate(queue):
+        if (i - index) > 3:
+            return "Too chaotic"
 
     n = len(queue)
     swap = 0
