@@ -27,17 +27,13 @@ def minimum_swaps(arr):
 
             # Update to reflect new index positions    
             index_of.update( {i: sorted_index} )
-            index_of.update( {arr[arr_index]: arr_index})
+            index_of.update( {arr[arr_index]: arr_index} )
 
     return swaps
 
 
-# 4 3 2 1 
 arr = [2, 3, 4, 1, 5]
-arr2 = [1, 3, 5, 2, 4, 6, 8]
-
 
 if __name__ == "__main__":
-
     swaps = minimum_swaps(arr)
     print(swaps)
