@@ -1,16 +1,24 @@
-# Selection Sort
+# Selection Sort Algorithm
 
-def selectionSort(alist):
-   for fillslot in range(len(alist) - 1, 0, -1):
-       positionOfMax = 0
+def selection_sort(arr):
+    """Uses selection sort algorithm to sort an unsorted array."""
+    
+    for fillslot in range(len(arr) - 1, 0, -1):
+
+       position_of_max = 0
+
        for location in range(1, fillslot + 1):
-           if alist[location] > alist[positionOfMax]:
-               positionOfMax = location
 
-       temp = alist[fillslot]
-       alist[fillslot] = alist[positionOfMax]
-       alist[positionOfMax] = temp
+           if arr[location] > arr[position_of_max]:
+               position_of_max = location
 
-alist = [54,26,93,17,77,31,44,55,20]
-selectionSort(alist)
-print(alist)
+       arr[fillslot], arr[position_of_max] = arr[position_of_max], arr[fillslot]
+
+    return arr
+
+
+if __name__ == '__main__':
+
+    arr = [54,26,93,17,77,31,44,55,20]
+    sorted_arr = selection_sort(arr)
+    print(sorted_arr)
